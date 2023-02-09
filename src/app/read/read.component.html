@@ -1,0 +1,29 @@
+<h1  class="text-center mt-3"  style="color: rgb(116, 116, 174);">Data Management</h1>
+<h3 class="show">{{text}}</h3>
+<table class="table table-broderd " style="margin-top: 30px; ">
+    <thead>
+      
+      <tr style=" color: rgb(113, 222, 222); ">
+        <th scope="col">ID</th>
+        <th scope="col">Fullname</th>
+        <th scope="col">Email</th>
+        <th scope="col">MobileNo.</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Update Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr *ngFor="let usr of readUser">
+        <th scope="row">{{usr.id}}</th>
+        <td>{{usr.fullname}}</td>
+        <td>{{usr.email}}</td>
+        <td>{{usr.mobile}}</td>
+        <td> <button class="btn btn-danger" (click)="deleteId(usr.id)">Delete</button>
+          <td> <a [routerLink]="['/create/'+usr.id]" class="btn btn-success" id="button"  >Update</a> 
+        </td>
+      </tr>
+     
+     
+    </tbody>
+  </table>

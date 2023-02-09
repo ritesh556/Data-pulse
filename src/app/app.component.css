@@ -1,0 +1,47 @@
+nav{
+    padding: 0.3vw;
+   
+   
+    
+    
+}
+
+
+.navbar-nav > li{
+    
+    margin-right: 3vw;
+   
+  }
+  .navbar-brand{
+    margin-right: 3vw;
+  }
+  .topnav-right {
+    float: center;
+   
+  }
+  .made-by {
+    text-align: center ;
+    color: #FFFFFF;
+    background: #232323;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+    
+    
+    margin-left: 89vw;
+    height: 6vw;
+    width: 10vw;
+    margin-top: 4.4vw;
+    position: sticky !important;
+    font-size: x-large;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    margin-top: 12vw;
+    border-radius: 50px;
+    
+   
+    
+   
+  }
+ 
+
+ 

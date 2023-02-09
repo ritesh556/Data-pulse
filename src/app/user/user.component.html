@@ -1,0 +1,38 @@
+
+<body>
+
+  <h1  class="text-center mt-3"  style="color: rgb(116, 116, 174);">Data Management</h1>
+
+  
+    <div class="container h-100">
+      <div class="d-flex justify-content-center h-100">
+        <div class="searchbar">
+          <input (keyup.enter)="getUserDataByName()" [(ngModel)]="name" class="search_input" type="text" name="" placeholder="Search for name..." >
+          <a (click)=" getUserDataByName()" class="search_icon"><i class="fas fa-search"></i>🔎</a> <br>
+          <select  size="4"  *ngIf="name.length>0 " [(ngModel)]="name"  (click)=" getUserDataByName() "   >
+           
+            <option *ngFor="let usr of readUser | filter: name ">{{ usr.fullname }} </option>
+           
+            <br>
+         
+          </select>
+        
+        </div>
+      </div>
+     
+      <ul *ngFor="let usr of readuser; index as i">
+        <h1 class="center" *ngIf="i==0">List of elements</h1>
+       
+       <h4  > {{i+1}}</h4>
+        <li>{{usr.fullname }}</li>
+        <li>{{usr.email}}</li>
+        <li>{{usr.mobile}}</li>
+      
+
+      </ul>
+   
+      
+    </div>
+    
+    
+  </body>

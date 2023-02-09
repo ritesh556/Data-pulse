@@ -1,0 +1,21 @@
+<h1  class="text-center mt-3"  style="color: rgb(116, 116, 174);">Data Management</h1>
+<div class="form-container">
+  <form [formGroup]="userForm" >
+    <h1>Add your account</h1>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Full Name" formControlName="fullname">
+    </div>
+    <div class="form-group">
+      <input type="email" class="form-control" placeholder="Email" formControlName="email" >
+    </div>
+    <div class="form-group">
+      <input type="tel" class="form-control" placeholder="Mobile No" formControlName="mobile">
+     
+    </div>
+    <button  class="btn btn-primary btn-block " *ngIf="!getparamid" (click)="userSubmit()" >Add User</button>
+    <button class="btn btn-primary btn-block " *ngIf="getparamid" (click)="updateUser()">Update User</button>
+    <div class="form-group">
+    <p [class]="display"  >{{value}}</p>
+  </div>
+  </form>
+</div>
